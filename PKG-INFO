@@ -1,0 +1,25 @@
+Metadata-Version: 1.0
+Name: gedit-projects
+Version: 1.3
+Summary: Manage projects in gedit
+Home-page: https://launchpad.net/gedit-projects
+Author: B. Clausius
+Author-email: barcc@gmx.de
+License: GPL-3
+Description: For this plugin a project is just a directory path. A list of last opened
+        files is stored in the user config directory. In the project directory itself
+        no data is stored or changed by the plugin. In the sidebar are two lists:
+         * Open Projects: projects with at least one open file
+         * All projects: project directories that are known to the plugin,
+           projects that contain subprojects are shown in a tree structure
+        In the context menu you can perform some actions, including:
+         * Open Project: restore all recently opened files of a project
+         * View Project Folder: the project folder is opened with the default program
+         * Close Project: all project files are closed (the file list is preserved)
+         * Add Folder, Remove Folder: specify which folders are known as a project
+         * Find Subprojects: search within the project folder for nested projects
+        After installing and activating the plugin, you can invoke the settings
+        dialog. There you can set up a directory that can be scanned for projects.
+        Project directories are recognized by specific file names within the
+        directory like VCS folders or files for build systems.
+Platform: UNKNOWN

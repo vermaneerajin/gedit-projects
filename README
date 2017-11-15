@@ -1,0 +1,73 @@
+gedit-projects
+==============
+
+Manage projects in gedit
+
+For this plugin a project is just a directory path. A list of last opened
+files is stored in the user config directory. In the project directory itself
+no data is stored or changed by the plugin. In the sidebar are two lists:
+ * Open Projects: projects with at least one open file
+ * All projects: project directories that are known to the plugin,
+   projects that contain subprojects are shown in a tree structure.
+
+In the context menu you can perform some actions, including:
+ * Open Project: restore all recently opened files of a project
+ * View Project Folder: the project folder is opened with the default program
+ * Close Project: all project files are closed (the file list is preserved)
+ * Add Folder, remove Folder: specify which folders are known as a project
+ * Find Subprojects: search within the project folder for nested projects
+
+After installing and activating the plugin, you can invoke the settings
+dialog. There you can set up a directory that can be scanned for projects.
+Project directories are recognized by specific file names within the
+directory like VCS folders or files for build systems. These file names are
+organized in two lists. The first list contains file names for projects that
+can have sub-projects. The second list contains file names for projects with
+no sub-projects, as these names are repeated often in the subdirectories of
+the same project (eg makefile, .svn). Subdirectories of such projects are not
+searched, but can be added manually.
+
+gedit-projects is for gedit versions 3.8 and above.
+For older versions see the project page.
+
+Project page: <https://launchpad.net/gedit-projects>
+Part of Gedit BC Developer Plugins: <https://launchpad.net/~gedit-bc-dev-plugins>
+
+
+Ubuntu Installation
+-------------------
+
+For Ubuntu packages are available in the official PPA.
+Add `ppa:gedit-bc-dev-plugins/releases` to your system's Software Sources and
+install `gedit-projects`. You can do this in a terminal:
+        sudo add-apt-repository ppa:gedit-bc-dev-plugins/releases
+        sudo apt-get update
+        sudo apt-get install gedit-projects-plugin
+More about this PPA:
+<https://launchpad.net/~gedit-bc-dev-plugins/+archive/releases>
+
+Daily builds are available in a PPA:
+<https://launchpad.net/~gedit-bc-dev-plugins/+archive/daily-build>
+Installation is as above but use `ppa:gedit-bc-dev-plugins/daily-build` instead.
+
+
+Manual Installation
+-------------------
+
+1. Copy both `projects.plugin` and `projects` folder to `~/.local/share/gedit/plugins/`
+2. Install the gsettings schema with the following commands:
+        sudo cp *.gschema.xml /usr/share/glib-2.0/schemas/
+        sudo glib-compile-schemas /usr/share/glib-2.0/schemas/
+3. Open gedit and click `Edit -> Preferences -> Plugins` and activate the plugin
+
+
+Feedback
+--------
+
+If you find any bugs or even just have a suggestion for an improvement then
+please submit a bug report by using the web-based interface at
+<https://bugs.launchpad.net/gedit-projects/+filebug>.
+
+If you have a question or would otherwise provide feedback, use the answer
+tracker: <https://launchpad.net/gedit-projects/+questions>
+
